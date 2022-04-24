@@ -30,7 +30,7 @@ body {
 body {
     background-image: url(./images/bg-desktop.svg);
     font-family: 'Open Sans';
-    padding: 2em 2em 2em 3em;
+    padding: 1.5em 3.5em;
     /* padding-left: 1.5em;
     padding-right: 1.5em; */
 }
@@ -40,15 +40,47 @@ body {
     display: flex;
     justify-content: left;
     height: auto;
+    padding: 1em 0;
     
+}
+
+.logo img {
+    height: 2.5em;
 }
 
 .hero {
     display: flex;
     justify-content: space-between;
+    padding: 2em 0 0.4em 0;
 }
 
+.left-col {
+    padding: 0 1em 0 0;
+    width: fit-content;
+}
+
+.left-col img {
+    height: 400px;
+    width: 600px;
+    
+}
+
+.right-col {
+    padding: 2em;
+}
 
 h2 {
     font-family: 'Poppins';
+    font-weight: bolder;
 }
+
+ul {
+    display: flex;
+    justify-content: right;
+
+}
+ul li {
+    list-style: none;
+    margin-left: 10px;
+}
+
