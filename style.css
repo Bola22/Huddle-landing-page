@@ -11,28 +11,16 @@
     --Soft-Magenta: hsl(300, 69%, 71%);
 }
 
-body {
-    background-color: var(--Violet);
-    background-image: url(./images/bg-mobile.svg);
-    color: white;
-    max-height: 100vh;
-    font-family: 'Open Sans';
-}
-
-
-/* @media only screen and (max-width: 375px) {
-    body {
-        background-image: url(./images/bg-mobile.svg);
-    }
-} */
 
 
 body {
     background-image: url(./images/bg-desktop.svg);
     font-family: 'Open Sans';
     padding: 1.5em 3.5em;
-    /* padding-left: 1.5em;
-    padding-right: 1.5em; */
+    font-size: 200;
+    font-size: 15px;
+    color: white;
+    background-color: var(--Violet);
 }
 
 
@@ -45,33 +33,47 @@ body {
 }
 
 .logo img {
-    height: 2.5em;
+    height: 3em;
 }
 
 .hero {
-    display: flex;
-    justify-content: space-between;
     padding: 2em 0 0.4em 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: min-content;
 }
 
-.left-col {
-    padding: 0 1em 0 0;
-    width: fit-content;
-}
 
-.left-col img {
-    height: 400px;
-    width: 600px;
-    
-}
 
 .right-col {
-    padding: 2em;
+    padding: 2em 4em;
 }
 
-h2 {
+.right-col p {
+    padding-bottom: 1em;
+}
+
+.title  {
     font-family: 'Poppins';
-    font-weight: bolder;
+    font-weight: 600;
+    font-size: 32px;
+    padding-bottom: 0.8em;
+}
+
+button {
+    padding: 1em 4em;
+    border-radius: 2em;
+    color: var(--Violet);
+    font-family: 'Poppins';
+    font-weight: 600;
+    border: 1px solid var(--Violet);
+    transition: ease-in-out .3s;
+}
+
+button:hover {
+    background-color: var(--Soft-Magenta);
+    color: white;
+    cursor: pointer;
 }
 
 ul {
@@ -81,6 +83,55 @@ ul {
 }
 ul li {
     list-style: none;
-    margin-left: 10px;
+    margin-left: 15px;
+}
+
+.fa-brands {
+    font-size: 18px;
+    border: 2px solid white;
+    border-radius: 5em;
+    padding: .4em;
+    transition: ease-in-out .3s;
+}
+
+.fa-brands:hover {
+    color: var(--Soft-Magenta);
+    border: 2px solid var(--Soft-Magenta);
+    cursor: pointer;
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+
+@media only screen and (max-width: 375px) {
+    body {
+        background-image: url(./images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        font-size: 14px;
+        max-width: 100%;
+        height: 100%;
+    }
+    .hero {
+        display: inline-block;
+        width: 100%;
+    }
+    .left-col img {
+        width: 100%;
+    }
+    .right-col {
+        justify-content: center;
+        text-align: center;
+    }
+    .title {
+        font-size: 25px;
+    }
+    button {
+        padding: 1em 7em;
+    }
+    ul {
+        display: flex;
+        justify-content: center;
+    }
 }
 
